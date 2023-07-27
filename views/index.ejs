@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+
+      <main>  <div class="box" id="heading">
+        <h1>
+          <%= listtitle %>
+        </h1>
+      </div>
+      
+          <div class="box">
+
+            <% for(var count=0; count<newlistItems.length; count++ ){ %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p> <%= newlistItems[count] %> </p>
+                </div>
+            <%} %>
+        
+            <form class="item" action="/" method="post">
+              <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+              <button type="submit" name="list" value="Tuesday," july="" 25="">+</button>
+            </form>
+      </div>
+      </main>
+    <%- include("partials/footer.ejs") %>
+      
